@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kornelius Kalnbach']
   spec.email         = ['murphy@rubychan.de']
 
-  spec.summary       = %q{A very simple Ruby code generator.}
+  spec.summary       = 'A very simple Ruby code generator.'
   spec.homepage      = 'https://github.com/korny/rubygen'
   spec.license       = 'MIT'
 

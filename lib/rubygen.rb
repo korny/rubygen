@@ -1,5 +1,6 @@
 require 'rubygen/version'
 
+# RubyGen helps you generating Ruby code by indenting it for you.
 class RubyGen
   def initialize
     @statements = []
@@ -36,7 +37,7 @@ class RubyGen
   end
 
   protected
-  
+
   def indentation
     '  ' * @level
   end
