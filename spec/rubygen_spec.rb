@@ -17,6 +17,7 @@ describe RubyGen do
   context 'with one statement' do
     it 'generates one line of code' do
       rubygen << 'exit'
+
       expect(rubygen.code).to eq('exit')
     end
   end
@@ -34,11 +35,12 @@ exit
 
   context 'with a blank line inside a block' do
     it 'generates multiple lines of code' do
-      rubygen.indent 'if free?'
+      rubygen.block 'if free?'
       rubygen << 'take_it'
       rubygen.blank
       rubygen << 'drink'
       rubygen.end
+
       expect(rubygen.code).to eq(<<-RUBY.chomp)
 if free?
   take_it
@@ -51,9 +53,10 @@ end
 
   context 'with an if block' do
     it 'handles indentation' do
-      rubygen.indent 'if happy?'
+      rubygen.block 'if happy?'
       rubygen << 'laugh'
       rubygen.end
+
       expect(rubygen.code).to eq(<<-RUBY.chomp)
 if happy?
   laugh
@@ -64,12 +67,13 @@ end
 
   context 'with a case block' do
     it 'handles indentation' do
-      rubygen.indent 'case country'
+      rubygen.block 'case country'
       rubygen.left 'when Germany'
       rubygen << 'drink :beer'
       rubygen.left 'when France'
       rubygen << 'drink :wine'
       rubygen.end
+
       expect(rubygen.code).to eq(<<-RUBY.chomp)
 case country
 when Germany
@@ -83,9 +87,10 @@ end
 
   context 'with a block and a modifier' do
     it 'handles indentation' do
-      rubygen.indent 'begin'
+      rubygen.block 'begin'
       rubygen << 'drink :beer'
       rubygen.end 'if sad?'
+
       expect(rubygen.code).to eq(<<-RUBY.chomp)
 begin
   drink :beer

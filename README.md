@@ -15,7 +15,7 @@ rubygen = RubyGen.new
 ### Use
 
 ```ruby
-rubygen.indent 'if free?'
+rubygen.block 'if free?'
 rubygen << 'take_it'
 rubygen.blank
 rubygen << 'drink'
@@ -30,7 +30,7 @@ puts rubygen.code
 
 prints this:
 
-```
+```ruby
 if free?
   take_it
 

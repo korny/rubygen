@@ -18,7 +18,7 @@ class RubyGen
     @statements << ''
   end
 
-  def indent statement
+  def block statement
     self << statement
     @level += 1
   end
