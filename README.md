@@ -1,5 +1,7 @@
 # RubyGen
 
+[![Build Status](https://travis-ci.org/korny/rubygen.svg?branch=master)](https://travis-ci.org/korny/rubygen)
+
 This library doesn't understand Ruby code, but it handles indentation for you.
 
 If you're looking for a code generator that takes s-expressions, check out Jim Weirich's [Sorcerer](https://github.com/jimweirich/sorcerer).
