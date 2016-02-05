@@ -26,6 +26,7 @@ describe RubyGen do
     it 'generates multiple lines of code' do
       rubygen << 'p self'
       rubygen << 'exit'
+
       expect(rubygen.code).to eq(<<-RUBY.chomp)
 p self
 exit
