@@ -6,3 +6,6 @@ Style/MethodDefParentheses:
 
 StringLiterals:
   EnforcedStyle: single_quotes
+
+Style/CaseEquality:
+  Enabled: false

@@ -1,8 +1,9 @@
 class RubyGen
+  # Tries to manage intentation automatically based on keywords and other syntax hints.
   module AutomaticIndentation
     LEFT_KEYWORDS = %w(
       else elsif when rescue ensure
-    )
+    ).freeze
 
     INDENT_KEYWORDS = %w(
       begin
