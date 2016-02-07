@@ -3,3 +3,6 @@ Metrics/LineLength:
 
 Style/MethodDefParentheses:
   Enabled: false
+
+StringLiterals:
+  EnforcedStyle: single_quotes
